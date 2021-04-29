@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   background: var(--background);
-  border-bottom: 0.0625rem solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+
 `;
 
 export const Content = styled.div`
@@ -13,10 +15,14 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   
-
   div {
     display: flex;
     flex-direction: row;
+  }
+
+  img {
+    max-height: 49px;
+    margin-right: 3rem;
   }
 
   ul {
@@ -26,50 +32,71 @@ export const Content = styled.div`
     
     li {
       line-height: 1rem;
-      padding: 1rem 1.5rem;
+      padding: 1.2rem 1.5rem;
+    }   
+
+    .dropdown-right, .dropdown-left {
+      position: relative;
       
-      button {
-        color: var(--black);
-        font-size: 1rem;
-        background-color: var(--background);
-        border: 0;
-        cursor: pointer;
-        i.fa-caret-down {
-          color: var(--border);
-        }        
-      }
-
-      .dropdown-container {
-        max-width: 100%;
-        max-height: 0px;
+      div {
+        top: 100%;
         overflow: hidden;
+        max-height: 0px;
         position: absolute;
-      }
-
-      .dropdown-content {
         display: block;
-        
-        background-color: var(--shape);
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0  px rgba(0,0,0,0.2);
+        background-color: var(--background);
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
-        transition: max-height 1s ease-in-out;
+        transition: max-height 1s;
 
         a {
-          border: 0.0625px solid var(--border);
-          border-top: none;
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block; 
-        }        
-      } 
+          font-size: 1rem;
+          float: none;
+          color: var(--black);
+          padding: 0.8rem;
+          display: block;
+          text-align: left; 
+          display: block;
 
-      &:hover {
-        .dropdown-container {
-          max-height: 600px;
+          i {
+            margin-right: 0.75rem;
+          }
         }
-      } 
-    }    
+      }
+
+      &:hover div{
+        max-height: 400px;
+      }
+    }
+
+    .dropdown-right {
+      div {
+        right: 0;
+      }
+    }
+  }
+
+  a {    
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: var(--black);
+    }
+  }
+
+  button {
+    color: var(--black);
+    font-size: 1rem;
+    background-color: var(--background);
+    border: 0;
+    cursor: pointer;
+    i.fa-caret-down {
+      color: var(--border);
+    }        
   }
 `;

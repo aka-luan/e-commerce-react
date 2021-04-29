@@ -41,6 +41,6 @@ export const GlobalStyle = createGlobalStyle`
     //font-weight: 600;
   }
 
-
+  
   
 `;
