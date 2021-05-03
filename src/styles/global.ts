@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     --red: #e9150a;
     --black: #080b13;
 
-    --border: #9b9791;
+    --border: #9b97914d;
     --shape: #f3efeb;
     --background: #faf9f7;
   }
@@ -39,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6, strong {
     font-family: 'Gilroy-Bold', sans-serif;
     //font-weight: 600;
+  }
+
+  .fas {
+    width: 15px;
   }
 
   

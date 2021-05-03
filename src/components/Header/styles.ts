@@ -31,8 +31,7 @@ export const Content = styled.div`
     flex-direction: row;
     
     li {
-      line-height: 1rem;
-      padding: 1.2rem 1.5rem;
+      padding: 1rem;
     }   
 
     .dropdown-right, .dropdown-left {
@@ -48,6 +47,7 @@ export const Content = styled.div`
         min-width: 150px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+        border-top: 1px solid var(--border);
         transition: max-height 1s;
 
         a {
@@ -95,6 +95,7 @@ export const Content = styled.div`
     background-color: var(--background);
     border: 0;
     cursor: pointer;
+    padding: 1rem;
     i.fa-caret-down {
       color: var(--border);
     }        

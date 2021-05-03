@@ -4,7 +4,7 @@ import { Container, Content } from "./styles"
 
 import logoImg from "../../assets/logo.svg"
 
-import { api } from '../../services/api'
+import { api } from '../../services/api'  
 
 
 
@@ -25,20 +25,20 @@ export function Header() {
           <img src={logoImg} alt="Luan Alves Clothing logo" />
           <ul>
             <div className="dropdown-left">
-              <button className="dropbtn">category<i className="fas fa-caret-down" style={{ marginLeft: "1rem" }}></i>
+              <button className="dropbtn">Category<i className="fas fa-caret-down" style={{ marginLeft: "1rem" }}></i>
               </button>
               <div>
-                {categories?.map(category => <a href="/">{category}</a>)}
+                {categories?.map(category => <a key={category} href="/">{category[0].toUpperCase() + category.slice(1)}</a>)}
               </div>
             </div>
             <li>
-              <a href="/">about us</a>
+              <a href="/">About us</a>
             </li>
             <li>
-              <a href="/">assistance</a>
+              <a href="/">Assistance</a>
             </li>
             <li>
-              <a href="/">contacts</a>
+              <a href="/">Contacts</a>
             </li>
           </ul>
         </div>
@@ -51,14 +51,14 @@ export function Header() {
               <a href="/"><i className="fas fa-shopping-basket"></i></a>
             </li>
             <div className="dropdown-right">
-              <button className="dropbtn">user<i className="fas fa-caret-down" style={{ marginLeft: "1rem" }}></i>
+              <button className="dropbtn">User<i className="fas fa-caret-down" style={{ marginLeft: "1rem" }}></i>
               </button>
               <div>
-                <a href="/"><i className="far fa-id-badge"></i>my profile</a>
-                <a href="/"><i className="fas fa-user-edit"></i>edit profile</a>
-                <a href="/"><i className="fas fa-cog"></i>settings</a>
-                <a href="/"><i className="far fa-question-circle"></i>help</a>
-                <a href="/"><i className="fas fa-sign-out-alt"></i>logout</a>
+                <a href="/"><i className="far fa-id-badge"></i>My profile</a>
+                <a href="/"><i className="fas fa-user-edit"></i>Edit profile</a>
+                <a href="/"><i className="fas fa-cog"></i>Settings</a>
+                <a href="/"><i className="far fa-question-circle"></i>Help</a>
+                <a href="/"><i className="fas fa-sign-out-alt"></i>Logout</a>
               </div>
             </div>
           </ul>
